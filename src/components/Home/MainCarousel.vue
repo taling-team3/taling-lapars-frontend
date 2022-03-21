@@ -34,7 +34,7 @@ import SwiperCore, { Autoplay, Pagination, Navigation } from 'swiper/core';
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
 export default defineComponent({
-  name: 'HelloWorld',
+  name: 'MainCarousel',
   components: {
     Swiper,
     SwiperSlide,

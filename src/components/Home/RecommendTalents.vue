@@ -57,7 +57,7 @@ import TalentCardItem from '@/components/Talent/TalentCardItem.vue';
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
 export default defineComponent({
-  name: 'HelloWorld',
+  name: 'RecommendTalents',
   components: {
     Swiper,
     SwiperSlide,
