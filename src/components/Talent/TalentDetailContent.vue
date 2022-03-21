@@ -1,5 +1,5 @@
 <template>
-  <div class="Content">
+  <div>
     <section>
       <ul class="w-[200px] flex justify-between mb-2 text-rose-500 font-bold">
         <li class="inline">다회차</li>
@@ -164,9 +164,6 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.Content {
-}
-
 .ImageSlide {
   @apply mb-16
 }
