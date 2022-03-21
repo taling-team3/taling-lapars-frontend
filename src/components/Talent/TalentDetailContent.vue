@@ -145,7 +145,7 @@ import TalentDetailReview from '@/components/Talent/TalentDetailReview.vue';
 import TalentDetailRecommend from '@/components/Talent/TalentDetailRecommend.vue';
 
 export default defineComponent({
-  name: 'TalentDetail',
+  name: 'TalentDetailContent',
   components: {
     TalentDetailRecommend,
     TalentDetailReview,
