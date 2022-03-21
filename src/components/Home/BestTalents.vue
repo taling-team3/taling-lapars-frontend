@@ -16,7 +16,7 @@ import { defineComponent } from 'vue';
 import TalentCardItem from '@/components/Talent/TalentCardItem.vue';
 
 export default defineComponent({
-  name: 'HotTrend',
+  name: 'BestTalelnts',
   components: {
     TalentCardItem,
   },

@@ -47,7 +47,7 @@
         </section>
         <section class="column_right">
           <div class="max-w-[360px]">
-            <Login/>
+            <LoginBox/>
             <HotTrend/>
             <OntimeReview/>
           </div>
@@ -60,7 +60,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import MainCarousel from '@/components/Home/MainCarousel.vue';
-import Login from '@/components/Home/Login.vue';
+import LoginBox from '@/components/Home/LoginBox.vue';
 import HotTrend from '@/components/Home/HotTrend.vue';
 import OntimeReview from '@/components/Home/OntimeReview.vue';
 import TalentsArea from '@/components/Home/TalentsArea.vue';
@@ -69,7 +69,7 @@ export default defineComponent({
   name: 'HomeView',
   components: {
     MainCarousel,
-    Login,
+    LoginBox,
     HotTrend,
     OntimeReview,
     TalentsArea,

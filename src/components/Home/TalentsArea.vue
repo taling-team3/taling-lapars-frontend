@@ -21,7 +21,7 @@ import RecommendTalents from '@/components/Home/RecommendTalents.vue';
 import BestTalents from '@/components/Home/BestTalents.vue';
 
 export default defineComponent({
-  name: 'HotTrend',
+  name: 'TalentsArea',
   components: {
     RecommendTalents,
     BestTalents,
