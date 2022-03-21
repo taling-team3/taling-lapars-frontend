@@ -10,15 +10,15 @@
         }"
         :navigation="true"
       >
-        <swiper-slide><TalentDetail /></swiper-slide
-        ><swiper-slide><TalentDetail /></swiper-slide
-        ><swiper-slide><TalentDetail /></swiper-slide
-        ><swiper-slide><TalentDetail /></swiper-slide
-        ><swiper-slide><TalentDetail /></swiper-slide
-        ><swiper-slide><TalentDetail /></swiper-slide
-        ><swiper-slide><TalentDetail /></swiper-slide
-        ><swiper-slide><TalentDetail /></swiper-slide
-        ><swiper-slide><TalentDetail /></swiper-slide>
+        <swiper-slide><TalentCardItem /></swiper-slide
+        ><swiper-slide><TalentCardItem /></swiper-slide
+        ><swiper-slide><TalentCardItem /></swiper-slide
+        ><swiper-slide><TalentCardItem /></swiper-slide
+        ><swiper-slide><TalentCardItem /></swiper-slide
+        ><swiper-slide><TalentCardItem /></swiper-slide
+        ><swiper-slide><TalentCardItem /></swiper-slide
+        ><swiper-slide><TalentCardItem /></swiper-slide
+        ><swiper-slide><TalentCardItem /></swiper-slide>
       </swiper>
     </div>
     <div class="together">
@@ -31,15 +31,15 @@
         }"
         :navigation="true"
       >
-        <swiper-slide><TalentDetail /></swiper-slide
-        ><swiper-slide><TalentDetail /></swiper-slide
-        ><swiper-slide><TalentDetail /></swiper-slide
-        ><swiper-slide><TalentDetail /></swiper-slide
-        ><swiper-slide><TalentDetail /></swiper-slide
-        ><swiper-slide><TalentDetail /></swiper-slide
-        ><swiper-slide><TalentDetail /></swiper-slide
-        ><swiper-slide><TalentDetail /></swiper-slide
-        ><swiper-slide><TalentDetail /></swiper-slide>
+        <swiper-slide><TalentCardItem /></swiper-slide
+        ><swiper-slide><TalentCardItem /></swiper-slide
+        ><swiper-slide><TalentCardItem /></swiper-slide
+        ><swiper-slide><TalentCardItem /></swiper-slide
+        ><swiper-slide><TalentCardItem /></swiper-slide
+        ><swiper-slide><TalentCardItem /></swiper-slide
+        ><swiper-slide><TalentCardItem /></swiper-slide
+        ><swiper-slide><TalentCardItem /></swiper-slide
+        ><swiper-slide><TalentCardItem /></swiper-slide>
       </swiper>
     </div>
   </div>
@@ -52,7 +52,7 @@ import 'swiper/swiper.scss';
 import 'swiper/components/pagination/pagination.min.css';
 import 'swiper/components/navigation/navigation.min.css';
 import SwiperCore, { Autoplay, Pagination, Navigation } from 'swiper/core';
-import TalentDetail from '@/components/Talent/TalentDetail.vue';
+import TalentCardItem from '@/components/Talent/TalentCardItem.vue';
 
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
@@ -61,7 +61,7 @@ export default defineComponent({
   components: {
     Swiper,
     SwiperSlide,
-    TalentDetail,
+    TalentCardItem,
   },
   methods: {
     // eslint-disable-next-line
