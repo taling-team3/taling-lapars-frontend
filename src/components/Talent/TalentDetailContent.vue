@@ -136,7 +136,6 @@
     <TalentDetailReview/>
     <TalentDetailRecommend/>
   </div>
-  <TalentDetailAside/>
 </template>
 
 <script lang="ts">
@@ -144,12 +143,10 @@ import { defineComponent } from 'vue';
 import TalentDetailDescription from '@/components/Talent/TalentDetailDescription.vue';
 import TalentDetailReview from '@/components/Talent/TalentDetailReview.vue';
 import TalentDetailRecommend from '@/components/Talent/TalentDetailRecommend.vue';
-import TalentDetailAside from '@/components/Talent/TalentDetailAside.vue';
 
 export default defineComponent({
   name: 'TalentDetail',
   components: {
-    TalentDetailAside,
     TalentDetailRecommend,
     TalentDetailReview,
     TalentDetailDescription,
