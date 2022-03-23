@@ -1,7 +1,7 @@
 <template>
   <div class="login_box">
     <p class="login_msg">로그인하시고 탈잉의<br>다양한 튜터를 만나보세요</p>
-    <router-link to="/" class="link_login">탈잉 로그인</router-link>
+    <router-link to="/login" class="link_login">탈잉 로그인</router-link>
   </div>
 </template>
 
