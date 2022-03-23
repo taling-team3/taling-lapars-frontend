@@ -1,7 +1,7 @@
 <template>
   <div id="wrap">
     <header id="header">
-      <div class="container flex justify-between">
+      <div class="container flex justify-between min-w-[1200px]">
         <h1 class="logo">
           <img
             src="https://front-img.taling.me/Content/app3/img/logo/app-logo@2x.png"
@@ -9,7 +9,7 @@
           />
         </h1>
         <div class="hd_main border-box mx-[12px]">
-          <div class="link_home mr-12">홈HOME</div>
+          <router-link to="/" class="link_home mr-12">홈HOME</router-link>
           <div class="box_sch">
             <label for="inp_sch" class="w-[calc(100%-39px)]">
               <input
@@ -37,7 +37,7 @@
         </div>
       </div>
     </header>
-    <main class="container block">
+    <main class="container block min-w-[1200px]">
       <div class="main_content">
         <section class="column_left">
           <div class="mb-3">
