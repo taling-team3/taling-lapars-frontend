@@ -23,12 +23,9 @@ export default defineComponent({
     onSignIn(user) {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const profile = user.getBasicProfile();
-      console.log(user.wc.access_token);
-      console.log(user.wc.id_token);
-      console.log(`ID: ${profile.getId()}`);
-      console.log(`Name: ${profile.getName()}`);
-      console.log(`Image URL: ${profile.getImageUrl()}`);
-      console.log(`Email: ${profile.getEmail()}`);
+      this.$store.dispatch('setIdToken', user.wc.id_token);
+      this.$store.dispatch('setName', profile.getName());
+      this.$router.push('/');
     },
   },
   mounted() {

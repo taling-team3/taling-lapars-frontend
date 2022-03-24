@@ -47,7 +47,12 @@
         </section>
         <section class="column_right">
           <div class="max-w-[360px]">
-            <LoginBox/>
+            <div v-if="!isAuthenticated" >
+              <LoginBox/>
+            </div>
+            <div v-if="isAuthenticated">
+              <LoginUserBox/>
+            </div>
             <HotTrend/>
             <OntimeReview/>
           </div>
@@ -64,15 +69,30 @@ import LoginBox from '@/components/Home/LoginBox.vue';
 import HotTrend from '@/components/Home/HotTrend.vue';
 import OntimeReview from '@/components/Home/OntimeReview.vue';
 import TalentsArea from '@/components/Home/TalentsArea.vue';
+import LoginUserBox from '@/components/Home/LoginUserBox.vue';
 
 export default defineComponent({
   name: 'HomeView',
+  data() {
+    return {
+      isAuthenticated: false,
+    };
+  },
   components: {
     MainCarousel,
     LoginBox,
     HotTrend,
     OntimeReview,
     TalentsArea,
+    LoginUserBox,
+  },
+  methods: {
+    checkAuthentication() {
+      this.isAuthenticated = this.$store.getters.isAuthenticated;
+    },
+  },
+  created() {
+    this.checkAuthentication();
   },
 });
 </script>
