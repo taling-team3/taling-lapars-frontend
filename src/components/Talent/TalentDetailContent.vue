@@ -17,11 +17,7 @@
         </div>
       </div>
     </section>
-    <div class="ImageSlide">
-      <img src="https://img.taling.me/Content/Uploads/Cover/6a1b476e8e2a220fe04a4aa3aeb24b7816c7ad3d.png"
-           alt="slide"
-           class="h-[442px] w-[653px]"/>
-    </div>
+    <TalentDetailSwiper/>
     <TalentDetailDescription>
       <template v-slot:title>
         <p>클래스 요약</p>
@@ -55,9 +51,9 @@
       <template v-slot:description>
         <div class="mb-4">
           <img
-              :src="tutorPhotoUrl"
-              alt="tutorPhoto"
-              class="inline h-[50px] w-[50px] mr-4 rounded-3xl"/>
+            :src="tutorPhotoUrl"
+            alt="tutorPhoto"
+            class="inline h-[50px] w-[50px] mr-4 rounded-3xl"/>
           <span>서원</span>
         </div>
         <p>✔국제 대안학교 졸업</p>
@@ -77,9 +73,10 @@
         <p>인가요?</p>
       </template>
       <template v-slot:description>
-        <img src="https://img.taling.me/Content/Uploads/Curri/f75ebab36c68476075039350086b006c76012fd7.png"
-             alt="article"
-             class="h-[439px] w-[613px] mb-8"/>
+        <img
+          src="https://img.taling.me/Content/Uploads/Curri/f75ebab36c68476075039350086b006c76012fd7.png"
+          alt="article"
+          class="h-[439px] w-[613px] mb-8"/>
         "나는 킹 받는 일이 있을 때 떡볶이를 먹는다" 영어로 말하면?
       </template>
     </TalentDetailDescription>
@@ -143,10 +140,12 @@ import { defineComponent } from 'vue';
 import TalentDetailDescription from '@/components/Talent/TalentDetailDescription.vue';
 import TalentDetailReview from '@/components/Talent/TalentDetailReview.vue';
 import TalentDetailRecommend from '@/components/Talent/TalentDetailRecommend.vue';
+import TalentDetailSwiper from '@/components/Talent/TalentDetailSwiper.vue';
 
 export default defineComponent({
   name: 'TalentDetailContent',
   components: {
+    TalentDetailSwiper,
     TalentDetailRecommend,
     TalentDetailReview,
     TalentDetailDescription,
@@ -161,7 +160,4 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.ImageSlide {
-  @apply mb-16
-}
 </style>
