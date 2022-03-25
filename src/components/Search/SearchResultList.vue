@@ -2,8 +2,18 @@
   <div class="w-full flex flex-col items-center justify-center">
     <div
       class="grid grid-cols-3 grid-rows-3 w-[800px] h-[1250px] justify-items-center items-center">
-      <div v-for="item in items[currentPage]" :key="item">
-        <TalentCardItem/>
+      <div v-for="item in list[currentPage]" :key="item">
+        <TalentCardItem
+        :no="item.no"
+        :thumbUrl="item.thumbUrl"
+        :badge="item.badge"
+        :talentTitle="item.talentTitle"
+        :category="item.category"
+        :tutor="item.tutor"
+        :price="item.price"
+        :classDetail="item.classDetail"
+        :userCount="item.userCount"
+        />
       </div>
     </div>
     <div class="flex justify-center items-center">
@@ -42,6 +52,56 @@ export default defineComponent({
         [{}, {}, {}, {}, {}, {}, {}, {}, {}],
         [{}, {}, {}, {}, {}, {}, {}, {}, {}],
         [{}, {}, {}, {}, {}, {}],
+      ],
+      list: [
+        [{
+          no: 1,
+          thumbUrl:
+            'https://img.taling.me/Content/Uploads/Images/2ba2306733b73146631a9ec853a56c22463d0bfa.png',
+          badge: '오리지널',
+          talentTitle: '실무에 진짜 필요한\n엑셀 노하우',
+          category: '엑셀',
+          tutor: '쏘피',
+          price: 119000,
+          classDetail: '(총 8시간 3분)',
+          userCount: 9373,
+        },
+        {
+          no: 2,
+          thumbUrl:
+            'https://img.taling.me/Content/Uploads/Images/2ba2306733b73146631a9ec853a56c22463d0bfa.png',
+          badge: '오리지널',
+          talentTitle: '실무에 진짜 필요한\n엑셀 노하우',
+          category: '엑셀',
+          tutor: '쏘피',
+          price: 119000,
+          classDetail: '(총 8시간 3분)',
+          userCount: 9373,
+        },
+        {
+          no: 3,
+          thumbUrl:
+            'https://img.taling.me/Content/Uploads/Images/2ba2306733b73146631a9ec853a56c22463d0bfa.png',
+          badge: 'vod',
+          talentTitle: '실무에 진짜 필요한\n엑셀 노하우',
+          category: '엑셀',
+          tutor: '쏘피',
+          price: 120000,
+          classDetail: '(총 8시간 3분)',
+          userCount: 9373,
+        },
+        {
+          no: 4,
+          thumbUrl:
+            'https://img.taling.me/Content/Uploads/Images/2ba2306733b73146631a9ec853a56c22463d0bfa.png',
+          badge: 'vod',
+          talentTitle: '실무에 진짜 필요한\n엑셀 노하우',
+          category: '엑셀',
+          tutor: '쏘피',
+          price: 120000,
+          classDetail: '(총 8시간 3분)',
+          userCount: 9373,
+        }],
       ],
     };
   },
