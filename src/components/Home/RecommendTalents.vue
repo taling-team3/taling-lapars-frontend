@@ -3,7 +3,7 @@
     <div class="rising">
       <h2 class="main_title">지금! 뜨고 있는 클래스</h2>
       <swiper :slidesPerView="3" :spaceBetween="30">
-        <swiper-slide v-for="item in list" :key="item" :item="item">
+        <swiper-slide v-for="item in recommend" :key="item" :item="item">
               <TalentCardItem
                 :no="item.no"
                 :thumbUrl="item.thumbUrl"
@@ -21,7 +21,7 @@
     <div class="together">
       <h2 class="main_title">함께 LIVE, 같이하면 더 쉬우니까</h2>
       <swiper :slidesPerView="3" :spaceBetween="30">
-        <swiper-slide v-for="item in list" :key="item" :item="item">
+        <swiper-slide v-for="item in recommend" :key="item" :item="item">
               <TalentCardItem
                 :no="item.no"
                 :thumbUrl="item.thumbUrl"
