@@ -9,7 +9,6 @@
     :pagination="{
       clickable: true,
     }"
-    :navigation="true"
   >
     <swiper-slide>
       <img src="https://img.taling.me/Content/Uploads/Images/d307783e603e7443c809be43a9963ab395e3fd98.png" alt="시집 출간 이벤트">
@@ -25,11 +24,15 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper';
+import 'swiper/swiper-bundle.css';
+import 'swiper/components/pagination';
 import { Swiper, SwiperSlide } from 'swiper/vue';
-import 'swiper/swiper.scss';
-import 'swiper/components/pagination/pagination.min.css';
-import 'swiper/components/navigation/navigation.min.css';
-import SwiperCore, { Autoplay, Pagination, Navigation } from 'swiper/core';
+// import { Swiper, SwiperSlide } from 'swiper/vue';
+// import 'swiper/swiper.scss';
+// import 'swiper/components/pagination/pagination.min.css';
+// import 'swiper/components/navigation/navigation.min.css';
+// import SwiperCore, { Autoplay, Pagination, Navigation } from 'swiper/core';
 
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 

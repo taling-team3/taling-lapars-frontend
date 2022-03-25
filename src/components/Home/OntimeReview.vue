@@ -8,10 +8,6 @@
       delay: 3000,
       disableOnInteraction: false,
     }"
-    :pagination="{
-      clickable: true,
-    }"
-    :navigation="true"
   >
     <swiper-slide>
       <router-link to="/" class="flex">

@@ -1,26 +1,26 @@
 <template>
-  <router-link to="/" >
-    <div>
-      <img class="thumb" src="https://img.taling.me/Content/Uploads/Images/2ba2306733b73146631a9ec853a56c22463d0bfa.png" alt="talent">
-    </div>
-    <div class="card_cnt">
-      <div class="badge_list">
-        <span class="badge">오리지널</span>
+  <div @click="goDetail(no)" @keydown="goDetail(no)">
+      <div>
+        <img class="thumb" :src="thumbUrl" alt="talent">
       </div>
-      <h3 class="talent_title">실무에 진짜 필요한<br>엑셀 노하우</h3>
-      <p class="cate_tutor">
-        <span>엑셀 </span>
-        <span>쏘피</span>
-      </p>
-      <p class="price_info">
-        <span class="price">119,000원</span>
-      </p>
-      <p class="class_detail">(총 8시간 3분)</p>
-      <div class="talent_info">
-        <span class="user">9373</span>
+      <div class="card_cnt">
+        <div class="badge_list">
+          <span class="badge">{{badge}}</span>
+        </div>
+        <h3 class="talent_title" v-html="lineBreakTalentTitle"></h3>
+        <p class="cate_tutor">
+          <span>{{category}} </span>
+          <span>{{tutor}}</span>
+        </p>
+        <p class="price_info">
+          <span class="price">{{unitPriceForDisplay(price)}}원</span>
+        </p>
+        <p class="class_detail">{{classDetail}}</p>
+        <div class="talent_info">
+          <span class="user">{{userCount}}</span>
+        </div>
       </div>
-    </div>
-  </router-link>
+  </div>
 </template>
 
 <script lang="ts">
@@ -30,6 +30,33 @@ export default defineComponent({
   name: 'TalentCardItem',
   components: {
 
+  },
+  props: {
+    no: Number,
+    thumbUrl: String,
+    badge: String,
+    talentTitle: {
+      type: String,
+      default: '',
+    },
+    category: String,
+    tutor: String,
+    price: Number,
+    classDetail: String,
+    userCount: Number,
+  },
+  methods: {
+    unitPriceForDisplay(price:number) {
+      return `${price.toLocaleString()}`;
+    },
+    goDetail(no:number) {
+      this.$router.push(`/Talent/${no}`);
+    },
+  },
+  computed: {
+    lineBreakTalentTitle() {
+      return this.talentTitle.replace('\n', '<br />');
+    },
   },
 });
 </script>
