@@ -14,11 +14,11 @@ FROM nginx:stable-alpine
 RUN rm -rf /usr/share/nginx/html/*
 
 COPY --from=frontend /app/dist/* /usr/share/nginx/html/
+COPY --from=frontend /app/docker/default.conf /etc/nginx/conf.d/default.conf
+
 RUN mkdir /usr/share/nginx/html/js
 RUN mkdir /usr/share/nginx/html/css
 
 RUN mv /usr/share/nginx/html/*.js /usr/share/nginx/html/js
 RUN mv /usr/share/nginx/html/*.js.map /usr/share/nginx/html/js
 RUN mv /usr/share/nginx/html/*.css /usr/share/nginx/html/css
-COPY ./default.conf /etc/nginx/conf.d/default.conf
-
