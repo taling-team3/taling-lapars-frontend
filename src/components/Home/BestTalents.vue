@@ -1,6 +1,6 @@
 <template>
   <div class="best-talents grid grid-cols-3 justify-center justify-items-center">
-    <div v-for="item in list" :key="item">
+    <div v-for="item in best" :key="item">
     <TalentCardItem
     :no="item.no"
     :thumbUrl="item.thumbUrl"
@@ -55,7 +55,7 @@ export default defineComponent({
         {
           no: 3,
           thumbUrl:
-            'https://s3.ap-northeast-2.amazonaws.com/taling.me/…r/s_3b01a17f86f0663c8197c4fc85bab02e907e6324.jpeg',
+            'https://img.taling.me/Content/Uploads/Images/fdf60a5f8ee363bda3349d537a40176a153a5060.jpg',
           badge: 'LIVE',
           talentTitle: '2022 사주&자미두수로 보는\n타고난 운',
           category: '사주/타로',
