@@ -47,6 +47,7 @@ import 'swiper/components/pagination/pagination.min.css';
 import 'swiper/components/navigation/navigation.min.css';
 import SwiperCore, { Autoplay, Pagination, Navigation } from 'swiper/core';
 import TalentCardItem from '@/components/Talent/TalentCardItem.vue';
+import Repository from '@/api/Talent';
 
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
@@ -56,6 +57,16 @@ export default defineComponent({
     Swiper,
     SwiperSlide,
     TalentCardItem,
+  },
+  created() {
+    Repository.getRecommendList()
+      .then((response) => {
+        console.log(response.data);
+        for (let i = 0; i < response.data.recommend.length; i += 1) {
+          this.recommend.push(response.data.recommend[i]);
+          console.log(this.recommend);
+        }
+      });
   },
   data() {
     return {
