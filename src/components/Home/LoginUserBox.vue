@@ -26,29 +26,27 @@
       </div>
     </div>
     <ul class="lnb">
-      <li class=""><a href="/My/MyTuteeList/">수업신청서</a></li>
-      <li><a href="/My/MyTuteeClassList/">수강목록</a></li>
-      <li class="link_wish"><a href="/My/MyTuteeWishList/">찜</a></li>
+      <li class="cursor-pointer">수업신청서</li>
+      <li class="cursor-pointer">수강목록</li>
+      <li class="link_wish">찜</li>
     </ul>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: "LoginUserBox",
+  name: 'LoginUserBox',
   components: {},
   methods: {
     getProfile(): string {
       return this.$store.getters.getName;
     },
-    signOut() {
+    async signOut() {
       // eslint-disable-next-line
       const authInst = (window as any).gapi.auth2.getAuthInstance();
-      authInst.signOut().then(() => {
-        console.log("User Signed Out!!!");
-      });
+      await authInst.signOut();
       authInst.disconnect();
       this.$router.go(0);
     },
@@ -60,33 +58,43 @@ export default defineComponent({
 .user_box {
   @apply border rounded-md border-slate-200 border-[1px];
 }
+
 .area_info_top {
   @apply flex items-center px-[20px] pt-[20px] pb-[16px];
 }
+
 .img_profile {
   @apply w-[45px] h-[45px] rounded-full;
 }
+
 .logon_msg {
   @apply pl-[15px];
 }
+
 .level {
   @apply text-[12px] mr-[3px];
 }
+
 .btn_logout {
   @apply ml-[10px] font-bold text-[10px] text-[#999] underline-offset-1;
 }
+
 .area_info_bottom {
   @apply flex items-center justify-between px-[20px] pb-[14px];
 }
+
 .btn_coupon {
   @apply pr-[17px] pl-[15px] rounded-md bg-black bg-opacity-10 text-[0px];
 }
+
 .lnb {
   @apply flex items-center text-center border border-slate-200 border-[1px];
 }
+
 .lnb li {
   @apply w-1/3 pt-[15px] pb-[16px];
 }
+
 .link_wish {
   background: url("https://front-img.taling.me/Content/app3/img/icon/icon-wish-clicked@2x.png");
   background-position-x: 37px;
