@@ -14,7 +14,7 @@
           {{ getProfile() }}님
         </b>
         <span>반가워요</span>
-        <button class="btn_logout" type="button" id="btn-menu-logout">
+        <button class="btn_logout" type="button" id="btn-menu-logout" @click="signOut()">
           로그아웃
         </button>
       </div>
@@ -42,6 +42,15 @@ export default defineComponent({
   methods: {
     getProfile():string {
       return this.$store.getters.getName;
+    },
+    signOut() {
+      // eslint-disable-next-line
+      const authInst = (window as any).gapi.auth2.getAuthInstance();
+      authInst.signOut().then(() => {
+        console.log('User Signed Out!!!');
+      });
+      authInst.disconnect();
+      this.$router.go(0);
     },
   },
 });
