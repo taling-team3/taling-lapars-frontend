@@ -1,4 +1,4 @@
-name: Backend Chat CI/CD
+name: Lapras-frontend
 
 on:
   push:
